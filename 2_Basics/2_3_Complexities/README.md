@@ -79,6 +79,11 @@ print(count)
   - ![n^2 \in O(n^2)](https://render.githubusercontent.com/render/math?math=n%5E2%20%5Cin%20O(n%5E2))
   - ![n \in O(n^2)](https://render.githubusercontent.com/render/math?math=n%20%5Cin%20O(n%5E2))
 
+## **O(n) notation을 표준으로 동작하게 구성한다.이유를 좀 더 찾아보자**
+
+> 상한 notation인 O(n)으로 구현하라고 하게 되면 실제 알고리즘의 시간 복잡도는 세타 notation과 달리, 
+
+
 ### Big-Omega  Notation
 
 <img src="img/5.png" height=300></img>
