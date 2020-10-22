@@ -15,7 +15,7 @@
 1. 리스트의 뒤에 개체를 삽입(appending)하는 연산자
 ![append](img/3.png)
 1. 리스트의 첫 머리(head)를 결정하는 연산자
-![setHead](img/4.png)
+![set_head](img/4.png)
 1. 주어진 인덱스에 해당하는 요소에 접근하는 연산자
 ![access](img/5.png)
 1. 주어진 인덱스에 새로운 요소를 삽입하는 연산자
@@ -30,10 +30,10 @@
   - 배열을 기반으로 만들어진 리스트
   - 가변 길이를 가지는 배열을 이용하여 리스트 구현
   - Array List에서 각 연산의 복잡도
-    - `isEmpty()`: O(1)
+    - `is_empty()`: O(1)
     - `prepend()`: O(n)
     - `append()`: O(n) (조건부 O(1))
-    - `setHead(index)`: O(1)
+    - `set_head(index)`: O(1)
     - `access(index)`: O(1)
     - `insert(item, index)`: O(n)
     - `remove(index)`: O(n)
@@ -72,6 +72,8 @@
 - **구현 조건**
   - `class`와 `array.array`를 이용하여 Array List를 구현한다.
     - 데이터의 타입은 `l`(signed long)으로 한다.
+    - `array.array` 객체의 메소드는 아래 메소드만을 사용한다.
+      - `arr[ind]`(인덱스로 접근), `arr[ind:]`(슬라이싱)
   - `array.array`의 용량(capacity)은 고정되어 있다고 가정한다.
     - 배열의 크기가 부족할 때 마다 2배 길이의 `array.array`를 새로 생성한다.
   - 다음과 같은 리스트 ADT의 연산자를 구현해야 한다.
