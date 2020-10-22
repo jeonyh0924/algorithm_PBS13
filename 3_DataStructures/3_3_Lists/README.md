@@ -37,22 +37,25 @@
     - `access(index)`: O(1)
     - `insert(item, index)`: O(n)
     - `remove(index)`: O(n)
+    - `remove(index)`: O(n)
+    - **list와 비교하여 값이 정해져있고, method 동작이 이루어지지 않으며, 인덱싱을 이용하여 빠르게 순회하는 경우메만 의미가 있다**
+    
 - **연결 리스트 (Linked List)**
 ![Linked List](img/9.png)
   - 단방향(Singly Linked List) 또는 양방향(Doubly Linked List)
   - 각 요소는 값(Value)과 다음 요소를 *가르키는* 연결(Link)로 구성
   - 연결 리스트에서 각 연산의 복잡도
     - `isEmpty()`: O(1)
-    - `prepend()`: O(1)
-    - `append()`: O(n)
+    - `prepend()`: O(1) #  맨 앞에서 생성하고 next에 첫 번째로 있던 인덱스 붙이면 되니까
+    - `append()`: O(n) # 맨 마지막까지 순회하고 생성해야 하니까
     - `setHead(index)`: O(n)
     - `access(index)` : O(n)
-    - `insert(item, index)`: O(1) (w/o access)
-    - `remove(index)`: O(1) (w/o access)
+    - `insert(item, index)`: O(1) + O(n)(w/o access) # 추가할 노드를 찾기까지는 N, 추가하는데 1
+    - `remove(index)`: O(1) (w/o access) # 삭제할 노드를 찾기까지는 N, 삭제하는데 1
 
 ## Python와 리스트
 
-- Python의 List는 추상 자료형인 리스트를 구현한 **자료 구조**이다.
+- Python의 List는 추상 자료형인 리스트를 구현한 **자료 구조**이다. # **값에 참조, 주소 참조, 객체 주소 참조 그 때 사용하는 말 중에서 객체 참조로 구현된 데이터 타입이란 말인 것 같다.**
 - Array에 구현된 리스트의 기능 (*`italic`*: trivial하게 구현 가능)
   - 비어있는 리스트를 생성하는 생성자 (`__init__`)
   - 리스트가 비어있는지 확인하는 연산자 (*`len()`*)
