@@ -124,27 +124,48 @@ class DoublyLinkedList:
             print(str(curr.value) + ']')
 
 
-my_list = DoublyLinkedList()
-my_list.print()
+class LinkedQueue:
+    def __init__(self):
+        self.list = DoublyLinkedList()
 
-for i in range(10):
-    my_list.append(i + 1)
+    def put(self, value):
+        self.list.append(value)
 
-my_list.print()
+    def get(self):
+        value = self.list.access(0)
+        if value is not False:
+            self.list.remove(0)
+        return value
+    
+    def peek(self):
+        return self.list.access(0)
 
-for i in range(10):
-    my_list.prepend(i + 1)
+    def print(self):
+        self.list.print()
 
-my_list.print()
+queue = LinkedQueue()
+queue.print()
 
-value = my_list.access(3)
-print('my_list.access(3) = ' + str(value))
+queue.put(1)
+queue.put(2)
+queue.put(3)
+queue.put(4)
+queue.put(5)
+queue.put(6)
+queue.print()
 
-my_list.insert(8, 128)
-my_list.print()
+print(queue.get())
+print(queue.get())
+print(queue.get())
+print(queue.get())
+queue.print()
 
-my_list.remove(4)
-my_list.print()
+queue.put(4)
+queue.put(5)
+queue.put(6)
+queue.print()
 
-my_list.set_head(10)
-my_list.print()
+print(queue.get())
+print(queue.get())
+print(queue.get())
+queue.print()
